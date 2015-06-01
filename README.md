@@ -15,7 +15,7 @@ Features:
 
 Interface:
    - ng-bootstrap
-   - D3 and TopJSON
+   - D3 and TopoJSON
    - CSS
 
 Frontend:
