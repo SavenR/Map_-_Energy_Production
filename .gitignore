@@ -59,3 +59,4 @@ target/
 #Local Settings
 local_settings*
 z_misc/*
+.DS_Store*
