@@ -4,7 +4,7 @@ app.config(['$routeProvider', function($routeProvider){
     // console.log('in app.config');
     $routeProvider
     .when('/', {
-        templateUrl: '/templates/index.html',
+        templateUrl: '/templates/stateMap.html',
         controller: 'mainController'
     })
 }]);

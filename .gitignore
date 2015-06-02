@@ -56,7 +56,7 @@ docs/_build/
 # PyBuilder
 target/
 
-#Local Settings
+# Local Settings
 local_settings*
 z_misc/*
 .DS_Store*
