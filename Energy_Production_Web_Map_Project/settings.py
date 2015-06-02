@@ -53,7 +53,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'django_drf_starter_project.urls'
+ROOT_URLCONF = 'Energy_Production_Web_Map_Project.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_drf_starter_project.wsgi.application'
+WSGI_APPLICATION = 'Energy_Production_Web_Map_Project.wsgi.application'
 
 
 # Database
@@ -106,7 +106,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static", "root")
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'root')
+
+STATICFILES_DIRS = ( os.path.join( BASE_DIR, 'baseStatic' ), '/var/www/baseStatic/', )
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 MEDIA_URL = '/media/'

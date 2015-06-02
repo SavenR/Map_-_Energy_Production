@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_drf_starter_project.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Energy_Production_Web_Map_Project.settings")
 
 application = get_wsgi_application()
