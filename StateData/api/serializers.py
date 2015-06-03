@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from jsframework.models import modelName
+from StateData.models import EnergyProduction
 
 
-class exampleSerializer(serializers.ModelSerializer):
+class EPSerializer(serializers.ModelSerializer):
     class Meta:
-        model = modelName
-        fields = ('name',)
+        model = EnergyProduction
+        fields = ('state', 'coal', 'gas', 'oil', 'nuclear', 'biofuels', 'othRenews', 'totalProduction', 'totalRenewables', 'totalFF')
         # read_only_fields = ('date_joined',)
         # write_only_fields = ('password',)

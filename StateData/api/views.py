@@ -1,8 +1,8 @@
 from rest_framework import viewsets
-from jsframework.api.serializers import exampleSerializer
-from jsframework.models import modelName
+from StateData.api.serializers import EPSerializer
+from StateData.models import EnergyProduction
 
-class ExampleViewSet(viewsets.ModelViewSet):
-    queryset = modelName.objects.all()
-    serializer_class = exampleSerializer
-    lookup_field = 'name'
+class EPViewSet(viewsets.ModelViewSet):
+    queryset = EnergyProduction.objects.all()
+    serializer_class = EPSerializer
+    lookup_field = 'state'
