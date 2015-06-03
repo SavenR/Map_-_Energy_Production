@@ -6,6 +6,7 @@ from django.db import models
 
 class EnergyProduction(models.Model):
     stateList = (
+    ('TA', 'testing'),
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
     ('AZ', 'Arizona'),
@@ -58,6 +59,8 @@ class EnergyProduction(models.Model):
     ('WI', 'Wisconsin'),
     ('WY', 'Wyoming'))
 
+
+
     state = models.CharField(max_length=2, choices=stateList, unique=True)
     coal = models.DecimalField(max_digits=10, decimal_places=2)
     gas = models.DecimalField(max_digits=10, decimal_places=2)
@@ -65,6 +68,12 @@ class EnergyProduction(models.Model):
     nuclear = models.DecimalField(max_digits=10, decimal_places=2)
     biofuels = models.DecimalField(max_digits=10, decimal_places=2)
     othRenews = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Other Renewables')
+
+    @property
+    def totalProduction(self):
+        return self.coal + self.gas + self.oil + self.nuclear + self.biofuels + self.othRenews
+
+    # totalProd = models.DecimalField(max_digits=11, default=totalProduction(), decimal_places=2)
 
     @property
     def totalProduction(self):

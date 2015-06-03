@@ -1,0 +1,519 @@
+[{
+"state": "AL",
+"coal": 488.17,
+"gas": 230.4,
+"oil": 55.2,
+"nuclear": 428,
+"biofuels": 0,
+"othRenews": 232.2
+},
+
+{
+"state": "AK",
+"coal": 31.3,
+"gas": 398.5,
+"oil": 1115.7,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 17.6
+},
+
+{
+"state": "AZ",
+"coal": 161.4,
+"gas": 0.1,
+"oil": 0.3,
+"nuclear": 334.6,
+"biofuels": 5.5,
+"othRenews": 97.6
+},
+
+{
+"state": "AR",
+"coal": 2.1,
+"gas": 1164,
+"oil": 37.9,
+"nuclear": 162.4,
+"biofuels": 0,
+"othRenews": 105.2
+},
+
+{
+"state": "CA",
+"coal": 0,
+"gas": 277.7,
+"oil": 1143.8,
+"nuclear": 193.9,
+"biofuels": 24.3,
+"othRenews": 695.7
+},
+
+{
+"state": "CO",
+"coal": 629.6,
+"gas": 1902,
+"oil": 286,
+"nuclear": 0,
+"biofuels": 16.7,
+"othRenews": 87
+},
+
+{
+"state": "CT",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 179,
+"biofuels": 0,
+"othRenews": 26.6
+},
+
+{
+"state": "DE",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 3.6
+},
+
+{
+"state": "DC",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 0.3
+},
+
+{
+"state": "FL",
+"coal": 0,
+"gas": 19,
+"oil": 12.4,
+"nuclear": 187.3,
+"biofuels": 0,
+"othRenews": 242
+},
+
+{
+"state": "GA",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 355.7,
+"biofuels": 10.1,
+"othRenews": 184.1
+},
+
+{
+"state": "HI",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 21.2
+},
+
+{
+"state": "ID",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 0,
+"biofuels": 6.8,
+"othRenews": 151.7
+},
+
+{
+"state": "IL",
+"coal": 1094.2,
+"gas": 2.1,
+"oil": 51.5,
+"nuclear": 1010.2,
+"biofuels": 174.8,
+"othRenews": 112.9
+},
+
+{
+"state": "IN",
+"coal": 826.8,
+"gas": 8.9,
+"oil": 13.6,
+"nuclear": 0,
+"biofuels": 129,
+"othRenews": 68.5
+},
+
+{
+"state": "IA",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 45.6,
+"biofuels": 476.3,
+"othRenews": 166.3
+},
+
+{
+"state": "KS",
+"coal": 0.4,
+"gas": 336.4,
+"oil": 253.4,
+"nuclear": 86.8,
+"biofuels": 58.3,
+"othRenews": 56.1
+},
+
+{
+"state": "KY",
+"coal": 2193.3,
+"gas": 119.1,
+"oil": 18.5,
+"nuclear": 0,
+"biofuels": 4.7,
+"othRenews": 55.1
+},
+
+{
+"state": "LA",
+"coal": 53,
+"gas": 3058.7,
+"oil": 409.9,
+"nuclear": 164.1,
+"biofuels": 0.2,
+"othRenews": 107.6
+},
+
+{
+"state": "ME",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 132.9
+},
+
+{
+"state": "MD",
+"coal": 54.1,
+"gas": 0,
+"oil": 0,
+"nuclear": 142.3,
+"biofuels": 0,
+"othRenews": 50.1
+},
+
+{
+"state": "MA",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 61.4,
+"biofuels": 0,
+"othRenews": 66.7
+},
+
+{
+"state": "MI",
+"coal": 0,
+"gas": 135.3,
+"oil": 42.9,
+"nuclear": 293.6,
+"biofuels": 35.7,
+"othRenews": 110.6
+},
+
+{
+"state": "MN",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 125.2,
+"biofuels": 145.3,
+"othRenews": 149.5
+},
+
+{
+"state": "MS",
+"coal": 30.5,
+"gas": 65.4,
+"oil": 140.1,
+"nuclear": 76.5,
+"biofuels": 6,
+"othRenews": 68.9
+},
+
+{
+"state": "MO",
+"coal": 9.2,
+"gas": 0,
+"oil": 1,
+"nuclear": 112.3,
+"biofuels": 33.9,
+"othRenews": 49.5
+},
+
+{
+"state": "MT",
+"coal": 660.1,
+"gas": 70.9,
+"oil": 153.7,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 124.5
+},
+
+{
+"state": "NE",
+"coal": 0,
+"gas": 1.4,
+"oil": 17.5,
+"nuclear": 60.8,
+"biofuels": 250.2,
+"othRenews": 32.5
+},
+
+{
+"state": "NV",
+"coal": 0,
+"gas": 0,
+"oil": 2.1,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 58.6
+},
+
+{
+"state": "NH",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 85.8,
+"biofuels": 0,
+"othRenews": 42.2
+},
+
+{
+"state": "NJ",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 347,
+"biofuels": 0,
+"othRenews": 49.9
+},
+
+{
+"state": "NM",
+"coal": 409.1,
+"gas": 1374.2,
+"oil": 494.2,
+"nuclear": 0,
+"biofuels": 3.3,
+"othRenews": 35.3
+},
+
+{
+"state": "NY",
+"coal": 0,
+"gas": 27.2,
+"oil": 2,
+"nuclear": 427.3,
+"biofuels": 21.9,
+"othRenews": 334.1
+},
+
+{
+"state": "NC",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 412.7,
+"biofuels": 0,
+"othRenews": 144.9
+},
+
+{
+"state": "ND",
+"coal": 366.8,
+"gas": 238.4,
+"oil": 1406.4,
+"nuclear": 0,
+"biofuels": 49.9,
+"othRenews": 76.8
+},
+
+{
+"state": "OH",
+"coal": 642.1,
+"gas": 87.4,
+"oil": 28.3,
+"nuclear": 179.1,
+"biofuels": 60.1,
+"othRenews": 67.4
+},
+
+{
+"state": "OK",
+"coal": 22,
+"gas": 2304.9,
+"oil": 517.7,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 116.3
+},
+
+{
+"state": "OR",
+"coal": 0,
+"gas": 0.8,
+"oil": 0,
+"nuclear": 0,
+"biofuels": 5.5,
+"othRenews": 490.7
+},
+
+{
+"state": "PA",
+"coal": 1390.6,
+"gas": 2368.7,
+"oil": 24.9,
+"nuclear": 787.8,
+"biofuels": 14.7,
+"othRenews": 132.9
+},
+
+{
+"state": "RI",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 2.8
+},
+
+{
+"state": "SC",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 536,
+"biofuels": 0,
+"othRenews": 110.6
+},
+
+{
+"state": "SD",
+"coal": 0,
+"gas": 15.4,
+"oil": 10.2,
+"nuclear": 0,
+"biofuels": 135.3,
+"othRenews": 88.3
+},
+
+{
+"state": "TN",
+"coal": 28.4,
+"gas": 6.7,
+"oil": 2.2,
+"nuclear": 263,
+"biofuels": 30,
+"othRenews": 138.5
+},
+
+{
+"state": "TX",
+"coal": 578.7,
+"gas": 8564.5,
+"oil": 4209.9,
+"nuclear": 402.8,
+"biofuels": 46.5,
+"othRenews": 398.8
+},
+
+{
+"state": "UT",
+"coal": 387.1,
+"gas": 535.4,
+"oil": 175.5,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 20.8
+},
+
+{
+"state": "VT",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 52.3,
+"biofuels": 0,
+"othRenews": 27
+},
+
+{
+"state": "VA",
+"coal": 493.4,
+"gas": 151.4,
+"oil": 0.1,
+"nuclear": 301,
+"biofuels": 0,
+"othRenews": 101.6
+},
+
+{
+"state": "WA",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 97.8,
+"biofuels": 0,
+"othRenews": 1012.1
+},
+
+{
+"state": "WV",
+"coal": 3059.1,
+"gas": 602.3,
+"oil": 14.9,
+"nuclear": 0,
+"biofuels": 0,
+"othRenews": 44.4
+},
+
+{
+"state": "WI",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 149.8,
+"biofuels": 67.2,
+"othRenews": 121.9
+},
+
+{
+"state": "TA",
+"coal": 0,
+"gas": 0,
+"oil": 0,
+"nuclear": 149.8,
+"biofuels": 67.2,
+"othRenews": 121.9
+},
+
+{
+"state": "WY",
+"coal": 6973.7,
+"gas": 2249.2,
+"oil": 335,
+"nuclear": 0,
+"biofuels": 1.5,
+"othRenews": 51.9
+}]
