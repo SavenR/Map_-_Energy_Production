@@ -499,16 +499,6 @@
 },
 
 {
-"state": "TA",
-"coal": 0,
-"gas": 0,
-"oil": 0,
-"nuclear": 149.8,
-"biofuels": 67.2,
-"othRenews": 121.9
-},
-
-{
 "state": "WY",
 "coal": 6973.7,
 "gas": 2249.2,

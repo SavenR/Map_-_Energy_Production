@@ -68,24 +68,10 @@ class EnergyProduction(models.Model):
     nuclear = models.DecimalField(max_digits=10, decimal_places=2)
     biofuels = models.DecimalField(max_digits=10, decimal_places=2)
     othRenews = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Other Renewables')
-
-    @property
-    def totalProduction(self):
-        return self.coal + self.gas + self.oil + self.nuclear + self.biofuels + self.othRenews
-
-    # totalProd = models.DecimalField(max_digits=11, default=totalProduction(), decimal_places=2)
-
-    @property
-    def totalProduction(self):
-        return self.coal + self.gas + self.oil + self.nuclear + self.biofuels + self.othRenews
-
-    @property
-    def totalRenewables(self):
-        return self.biofuels + self.othRenews
-
-    @property
-    def totalFF(self):
-        return self.coal + self.gas + self.oil
+    totalProduction = models.DecimalField(max_digits=11, decimal_places=2, blank=True, editable=False)
+    totalRenewables = models.DecimalField(max_digits=11, decimal_places=2, blank=True, editable=False)
+    totalFF = models.DecimalField(max_digits=11, decimal_places=2, blank=True, editable=False)
+    percRenewables = models.DecimalField(max_digits=11, decimal_places=2, blank=True, editable=False)
 
 
     def __unicode__(self):
