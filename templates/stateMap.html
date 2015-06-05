@@ -1,11 +1,11 @@
-'{% extends "base.html" %}
+{% extends "base.html" %}
 {% load staticfiles %}
 {% block topOfHead %}
-<link href='http://fonts.googleapis.com/css?family=Exo+2:800' rel='stylesheet' type='text/css'>
+<link href="{% static 'StateData/css/GoogleFonts_Exo+2-800css.css' %}" rel="stylesheet" type="text/css">
 {% endblock topOfHead %}
 
 {% block title %}Renewables in Energy Production{% endblock title %}
-'{% block pageStyle %}{% static 'StateData/css/pageStyle.css' %}{% endblock pageStyle %}
+{% block pageStyle %}{% static 'StateData/css/pageStyle.css' %}{% endblock pageStyle %}
 
 {% block content %}
 <div class="container">
@@ -13,6 +13,9 @@
         <h1 class="col-md-12">Renewable Energy Production</h1>
     </header>
         statemap
-
 </div>
+
+<!-- Scripts -->
+<script type="text/javascript" rel="javascript" src="{% static 'base/js/topojson.1.6.19.min.js' %}"></script>
+<script type="text/javascript" rel="javascript" src="{% static 'base/js/d3.3.5.5.min.js' %}"></script>
 {% endblock content %}
