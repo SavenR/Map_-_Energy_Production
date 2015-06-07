@@ -5,6 +5,7 @@
 html, body, .container {
     background-color: #5933c4;
     height: 100%;
+    width: 100%;
 }
 h1 {
     font-family: 'Exo 2', sans-serif;
@@ -17,4 +18,8 @@ h1 {
 header {
     /*height: 10%;*/
     min-height: 30px;
+}
+
+#mapHolder {
+    width: 100%;
 }
