@@ -23,3 +23,29 @@ header {
 #mapHolder {
     width: 100%;
 }
+#mapCanvas {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+.landMass {
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+.state {
+    fill: #777;
+    stroke: #333;
+    stroke-width: 1;
+    stroke-linecap: square;
+}
+
+.stateLabel {
+    fill: #111;
+  fill-opacity: .5;
+  font-size: 20px;
+  font-weight: 300;
+  text-anchor: middle;
+}
