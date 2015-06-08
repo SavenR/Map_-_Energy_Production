@@ -3,13 +3,13 @@ var canvasWidth = 900,
     graphWidth = 400,
     height = 600;
 
-var canvas = d3.select('#mapHolder')
+var canvas = d3.select('#holder')
 .append('svg')
 .attr('width', canvasWidth)
 .attr('height', height)
 .attr('id', 'mapCanvas');
 
-var graphBlock = d3.select('#mapHolder')
+var graphBlock = d3.select('#holder')
 .append('svg')
 .attr('width', graphWidth)
 .attr('height', height)
@@ -60,8 +60,15 @@ d3.json('static/StateData/data/MBsStatesRN.json', function( error, usTopo ){
         .attr( 'class', 'interState' )
 
 
-    // Creates an area for graphs
-
+    // Initially displays a message in the graphBlock
+        graphBlock
+        .append('text')
+        .text('Click on a state to see more detailed information')
+        .attr( 'dy', '.35em' )
+        .attr( 'transform', function(){
+            return 'translate(' + graphWidth/2 + ', ' + height/2 + ')'
+        } )
+        .style( 'text-anchor', 'middle' )
 
     });
 })
