@@ -3,7 +3,7 @@
     cursor: pointer;
 }
 html, body, .container {
-    background-color: #5933c4;
+    /*background-color: #5933c4;*/
     height: 100%;
     width: 100%;
 }
@@ -23,29 +23,37 @@ header {
 #mapHolder {
     width: 100%;
 }
-#mapCanvas {
-    display: block;
+svg {
+/*    display: block;
     margin-left:auto;
-    margin-right: auto;
+    margin-right: auto;*/
     border: 1px solid black;
 }
-.landMass {
+/*.landMass {
     fill: none;
     stroke: black;
-    stroke-width: 4;
+    stroke-width: 2;
     stroke-linecap: round;
-}
+}*/
 .state {
-    fill: #777;
-    stroke: #333;
-    stroke-width: 1;
-    stroke-linecap: square;
+    opacity: 0.9;
 }
-
-.stateLabel {
+.state:hover {
+    opacity: 1.0;
+    stroke: #ffff89;
+    stroke-width: 2;
+}
+.interState {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+    /*stroke-width: 1;*/
+    /*stroke-linecap: square;*/
+}
+/*.stateLabel {
     fill: #111;
   fill-opacity: .5;
   font-size: 20px;
   font-weight: 300;
   text-anchor: middle;
-}
+}*/

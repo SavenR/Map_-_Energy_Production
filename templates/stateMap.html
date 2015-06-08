@@ -8,7 +8,15 @@
 {% block pageStyle %}{% static 'StateData/css/pageStyle.css' %}{% endblock pageStyle %}
 
 {% block content %}
+<div class="container">
+    <header class="row">
+        <h1 class="col-md-12">Renewable Energy Production</h1>
+    </header>
+    <div id="mapHolder" class="row">
+    </div>
+</div>
 
+<!-- Scripts -->
 <script type="text/javascript" rel="javascript" src="{% static 'base/js/topojson.1.6.19.min.js' %}"></script>
 <script type="text/javascript" rel="javascript" src="{% static 'base/js/d3.3.5.5.min.js' %}"></script>
 <script type="text/javascript" rel="javascript" src="{% static 'StateData/js/map.js' %}"></script>

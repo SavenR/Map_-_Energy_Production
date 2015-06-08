@@ -1,40 +1,69 @@
 // Environment variables
-var width = 900,
+var canvasWidth = 900,
+    graphWidth = 400,
     height = 600;
 
-var canvas = d3.select('body')
+var canvas = d3.select('#mapHolder')
 .append('svg')
-.attr('width', width)
+.attr('width', canvasWidth)
 .attr('height', height)
 .attr('id', 'mapCanvas');
 
-d3.json('static/StateData/data/MBsStatesRN.json', function( error, json ){
+var graphBlock = d3.select('#mapHolder')
+.append('svg')
+.attr('width', graphWidth)
+.attr('height', height)
+.attr('id', 'graphBlock');
+
+d3.json('static/StateData/data/MBsStatesRN.json', function( error, usTopo ){
     if (error) { return console.log(error) };
 
-    var
-        land = topojson.feature( json, json.objects.land ),
-        states = topojson.feature( json, json.objects.states ),
-        projection = d3.geo.albersUsa()
-            .scale(1000)
-            .translate([width / 2, height / 2]),
-        paths = d3.geo.path().projection( projection );
+    d3.json('static/StateData/data/energyProduction.json', function( epError, ep ){
+        if (epError) { return console.log(epError) };
+
+        var
+            land = topojson.feature( usTopo, usTopo.objects.land ),
+            states = topojson.feature( usTopo, usTopo.objects.states ),
+            projection = d3.geo.albersUsa()
+                .scale(1000)
+                .translate([canvasWidth / 2, height / 2]),
+            paths = d3.geo.path().projection( projection );
 
 
-//  Creates a single layer for the entire US
-    canvas.append('path')
-    .datum( land )
-    .attr( 'd',  paths )
-    .attr( 'class', 'landMass')
-    ;
+    // Choropleth color scale
+        var colorScale = d3.scale.linear().domain([0, .25, 1]).range(['#61754E', '#DAFFBA', '#92FF32']);
+        var count = 0;
 
-// Creates a layer of states
-    canvas.selectAll( '.state' ).data( states.features )
-    .enter().append( 'path')
-    .attr( 'd', paths ).attr( 'class', 'state' )
-    ;
+    // Creates a layer of states
+        canvas.selectAll( '.state' )
+        .data( states.features )
+        // .datum
+        // .data( ep, function(d){ return d.id })
+        // var theMap = d3.selectAll("svg path")
+           // .datum(function(d) { return {st: d3.select(this).attr("id")}; })
+        // theMap.data(data, function(d){ return d.st; });
+        .enter().append( 'path')
+        .attr( 'd', paths ).attr( 'class', 'state' )
+        .datum( function(d){ return { "state": d.id }; } )
+        .data( ep, function(d){ return d.state; } )
+        .style( 'fill', function(d){
+
+            return colorScale(( d.biofuels + d.othRenews )/( d.coal + d.gas + d.nuclear + d.oil + d.biofuels + d.othRenews ))
+        })
+        .on("click", function(d){ console.log(d); })
+        ;
+
+    // Creates lines between states
+        canvas.append( 'path' )
+        .datum( topojson.mesh( usTopo, usTopo.objects.states, function( a,b ){return (a !== b); } ))
+        .attr( 'd', paths )
+        .attr( 'class', 'interState' )
 
 
+    // Creates an area for graphs
 
+
+    });
 })
 //
 
@@ -51,7 +80,7 @@ d3.json('static/StateData/data/MBsStatesRN.json', function( error, json ){
         // Mike Bostock's US TopoJSON
 
 
-            // Adding ID labels for updating IDs
+    // Adding ID labels for updating IDs
     var path = d3.geo.path()
     .projection(projection)
     .pointRadius(2);
@@ -70,5 +99,11 @@ d3.json('static/StateData/data/MBsStatesRN.json', function( error, json ){
     } )
     .attr( 'dy', '.35em' )
     .text( function(d){ return d.id; } )
+// //  Creates a single layer for the entire US
+//     canvas.append('path')
+//     .datum( land )
+//     .attr( 'd',  paths )
+//     .attr( 'class', 'landMass')
+//     ;
 
 */
