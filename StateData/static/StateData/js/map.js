@@ -9,11 +9,69 @@ var canvas = d3.select('#holder')
 .attr('height', height)
 .attr('id', 'mapCanvas');
 
-var graphBlock = d3.select('#holder')
-.append('svg')
-.attr('width', graphWidth)
-.attr('height', height)
-.attr('id', 'graphBlock');
+var graphBlock = d3.select( '#holder' )
+.append( 'div' )
+.style( 'width', function(){ return '' + graphWidth + 'px'; } )
+.style( 'height', function(){ return '' + height + 'px'; })
+.style( 'display', 'inline-block' )
+.attr( 'id', 'graphBlock' );
+
+var updateGraphs = function( data ) {
+
+    var barWidth = (graphWidth/6 - 5),
+        maxBarHeight = 8600,
+        chartHeight = 200,
+        chartScale = d3.scale.linear()
+            .domain([0, graphWidth])
+            .range([0, chartHeight])
+        ;
+
+    // Clearing start message or old data
+    if (graphBlock.text() === 'Click on a state to see more detailed information'){
+        graphBlock.selectAll( '*' ).remove();
+
+        graphBlock.append( 'h2' )
+        .text(function(){ return data.state + ' Energy Production' })
+        .attr( 'class', 'graphTitle' )
+
+        var epGB = graphBlock
+        .append( 'svg' )
+        .attr( 'width', graphWidth-30 )
+        .attr( 'height', 200 )
+        .attr( 'x', 15 )
+        .attr( 'y', 35 )
+        .attr( 'class', 'graphBox')
+        .style('stroke', '#777')
+        .style('fill', 'none')
+
+        var bars = epGB
+        .selectAll( 'g' )
+        .data( function(){
+            // Need to remove state from the list of keys
+            var keys = Object.keys( data );
+            keys.splice(keys.indexOf('state'), 1)
+
+            return keys
+        } )
+        .enter()
+        .append( 'g' )
+        .attr("transform", function(d, i) { return "translate( " + i * barWidth + ", 0 )"; });
+
+        bars
+        .append( 'rect' )
+        .attr( 'width', barWidth-1 )
+        // .attr( 'height', function(d){console.log(d); console.log(chartScale(data[d])); return chartScale(data[d]); })
+        // // .datum( function(d){ return { "state": d.id }; } )
+        .transition()
+        .duration(2000)
+        .attr( 'height', function(d){ return '' + data[d]/maxBarHeight*chartHeight + 'px'; } )
+        .attr( 'class', 'graphBar')
+        .attr( 'y', function(d){ return chartHeight-data[d]/maxBarHeight*chartHeight-data; })
+
+        return;
+    }
+
+}
 
 d3.json('static/StateData/data/MBsStatesRN.json', function( error, usTopo ){
     if (error) { return console.log(error) };
@@ -31,7 +89,7 @@ d3.json('static/StateData/data/MBsStatesRN.json', function( error, usTopo ){
 
 
     // Choropleth color scale
-        var colorScale = d3.scale.linear().domain([0, .25, 1]).range(['#61754E', '#DAFFBA', '#92FF32']);
+        var colorScale = d3.scale.linear().domain([0, .25, 1]).range(['#828282', '#DAFFBA', '#92FF32']);
         var count = 0;
 
     // Creates a layer of states
@@ -50,25 +108,22 @@ d3.json('static/StateData/data/MBsStatesRN.json', function( error, usTopo ){
 
             return colorScale(( d.biofuels + d.othRenews )/( d.coal + d.gas + d.nuclear + d.oil + d.biofuels + d.othRenews ))
         })
-        .on("click", function(d){ console.log(d); })
+        .on("click", function(d){ updateGraphs(d); })
         ;
 
     // Creates lines between states
         canvas.append( 'path' )
         .datum( topojson.mesh( usTopo, usTopo.objects.states, function( a,b ){return (a !== b); } ))
         .attr( 'd', paths )
-        .attr( 'class', 'interState' )
+        .attr( 'class', 'interState' );
 
 
     // Initially displays a message in the graphBlock
-        graphBlock
-        .append('text')
+        var graphTitleEP = graphBlock
+        .append('p')
         .text('Click on a state to see more detailed information')
-        .attr( 'dy', '.35em' )
-        .attr( 'transform', function(){
-            return 'translate(' + graphWidth/2 + ', ' + height/2 + ')'
-        } )
-        .style( 'text-anchor', 'middle' )
+        .style('line-height', function(){ return ''+ height/2 + 'px'; })
+        .style('text-align', 'center    ');
 
     });
 })

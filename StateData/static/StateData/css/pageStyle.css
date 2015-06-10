@@ -23,9 +23,9 @@ header {
 #mapHolder {
     width: 100%;
 }
-svg {
-/*    display: block;
-    margin-left:auto;
+.graphBox {
+    /*display: inline-block;*/
+/*    margin-left:auto;
     margin-right: auto;*/
     border: 1px solid black;
 }
@@ -51,6 +51,23 @@ svg {
     /*stroke-width: 1;*/
     /*stroke-linecap: square;*/
 }
+
+/* Graphs */
+#graphBlock {
+    /*border: 1px solid black;*/
+    vertical-align:top;
+}
+.graphTitle {
+    font-size: 20px;
+    fill: #FF6200;
+    font-weight: 400;
+
+}
+.graphBar {
+    fill: #333;
+}
+
+
 /*.stateLabel {
     fill: #111;
   fill-opacity: .5;
