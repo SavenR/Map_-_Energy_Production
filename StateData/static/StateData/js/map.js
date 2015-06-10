@@ -66,7 +66,7 @@ var updateGraphs = function( data ) {
         .duration(2000)
         .attr( 'height', function(d){ return '' + data[d]/maxBarHeight*chartHeight + 'px'; } )
         .attr( 'class', 'graphBar')
-        .attr( 'y', function(d){ return chartHeight-data[d]/maxBarHeight*chartHeight-data; })
+        .attr( 'y', function(d){ return chartHeight-data[d]/maxBarHeight*chartHeight; })
 
         return;
     }
